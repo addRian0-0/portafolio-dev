@@ -7,6 +7,8 @@
 
 $text-resalt: rgb(231, 101, 122);
 $text: rgb(234, 231, 231);
+$text-shadow: rgba(234, 231, 231, 0.8);
+$main-black: #111;
 
 @mixin fondo-opt-1 {
   background: #000000;
@@ -40,6 +42,23 @@ $text: rgb(234, 231, 231);
 @mixin fadein-animation($duration: 4s, $delay: 1s) {
   animation: fadein $duration infinite;
   animation-delay: $delay;
+}
+
+/* Menu colapsable xd */
+@mixin menu-styles($width: 0px, $color: #111) {
+  height: 100%;
+  width: $width;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $main-black;
+  overflow-x: hidden;
+  padding-top: 30px;
+  transition: 0.5s;
+  li {
+    color: $color;
+  }
 }
 
 @keyframes typing {
@@ -104,6 +123,67 @@ body {
   h2 {
     font-weight: 500;
     font-size: 38px;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+
+  h3 {
+    margin: 10px;
+    font-size: 22px;
+    padding: 10px;
+    font-weight: normal;
+  }
+
+  span {
+    margin: 10px;
+    transition: 0.3s;
+  }
+
+  span:hover {
+    cursor: pointer;
+  }
+
+}
+
+/* menu colapsable */
+.sidebar {
+  @include menu-styles();
+}
+
+.sidebar-open {
+  @include menu-styles(250px, $text);
+
+  .menu {
+    margin: 20px;
+
+    ul {
+      margin-top: 20px;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 10px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 20px;
+      color: $text-shadow;
+      border-bottom: 2px solid rgb(45, 44, 44);
+      transition: 0.3s;
+    }
+
+    li:hover {
+      color: $text-resalt;
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+    }
+
   }
 }
 
