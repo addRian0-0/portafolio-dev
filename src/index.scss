@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+$text-resalt: rgb(231, 101, 122);
+$text: rgb(234, 231, 231);
+
+@mixin fondo-opt-1 {
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin fondo-opt-2 {
+  background: #200122;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6f0000, #200122);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6f0000, #200122);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Animacion de maquina de escribir */
+@mixin typing-animation($steps-animation: 13, $width-animation: 12ch) {
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: $width-animation;
+  animation: typing 2s steps($steps-animation), blink .5s infinite step-end alternate;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+@mixin fadein-animation($duration: 4s, $delay: 1s) {
+  animation: fadein $duration infinite;
+  animation-delay: $delay;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  12.5% {
+    opacity: 0.25;
+  }
+
+  25% {
+    opacity: 0.50;
+  }
+
+  37.5% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  62.5% {
+    opacity: 0.75;
+  }
+
+  75% {
+    opacity: 0.50;
+  }
+
+  87.5% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+body {
+  @include fondo-opt-2();
+}
+
+/* Header */
+.container-header {
+  margin: 3%;
+
+  h2 {
+    font-weight: 500;
+    font-size: 38px;
+  }
+}
+
+/* Carta de presentacion */
+.card-presentation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20%;
+  justify-content: center;
+  align-items: center;
+
+  .presentation-info {
+    max-width: 500px;
+  }
+
+  .arrow-down {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 40px;
+    @include fadein-animation(6s, 0s);
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 38px;
+    @include typing-animation(24, 19ch);
+
+    span {
+      color: $text-resalt;
+    }
+  }
+
+  p {
+    margin: 20px;
+    font-size: 20px;
+    color: $text;
+  }
+
+  img {
+    width: 276px;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
+/* Diseno responsivo */
+
+@media screen and (max-width: 850px) {
+
+  .card-presentation {
+    margin: 0;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin-top: 35%;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 196px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .presentation-info,
+    h2 {
+      max-width: 250px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+}
