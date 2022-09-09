@@ -1,12 +1,15 @@
 import CardPresentation from "./components/CardPresentation";
-import Header from "./components/Header";
+import CardInfo from "./components/CardInfo";
 import Navbar from "./components/Navbar";
+import CardHabilidades from "./components/CardHabilidades";
 
 export default function PortafolioApp() {
     return (
         <>
             <Navbar />
             <CardPresentation />
+            <CardInfo />
+            <CardHabilidades />
         </>
     )
 }

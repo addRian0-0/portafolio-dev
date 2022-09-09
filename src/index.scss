@@ -7,8 +7,11 @@
 
 $text-resalt: rgb(231, 101, 122);
 $text: rgb(234, 231, 231);
+$text-semi-shadow: rgba(234, 231, 231, 0.9);
 $text-shadow: rgba(234, 231, 231, 0.8);
 $main-black: #111;
+$black-transparent: rgba(17, 17, 17, 0.8);
+$black-shadow: rgb(45, 44, 44);
 
 @mixin fondo-opt-1 {
   background: #000000;
@@ -56,6 +59,7 @@ $main-black: #111;
   overflow-x: hidden;
   padding-top: 30px;
   transition: 0.5s;
+
   li {
     color: $color;
   }
@@ -174,7 +178,7 @@ body {
       padding-bottom: 16px;
       font-size: 20px;
       color: $text-shadow;
-      border-bottom: 2px solid rgb(45, 44, 44);
+      border-bottom: 2px solid $black-shadow;
       transition: 0.3s;
     }
 
@@ -187,25 +191,27 @@ body {
   }
 }
 
+/* Flecha de siguiente seccion */
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 40px;
+  @include fadein-animation(6s, 0s);
+  cursor: pointer;
+}
+
 /* Carta de presentacion */
 .card-presentation {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 20%;
+  margin-top: 15%;
   justify-content: center;
   align-items: center;
 
   .presentation-info {
     max-width: 500px;
-  }
-
-  .arrow-down {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    margin-top: 40px;
-    @include fadein-animation(6s, 0s);
   }
 
   h2 {
@@ -231,8 +237,129 @@ body {
   }
 }
 
-/* Diseno responsivo */
+/* Tarjeta de informacion */
+.card-info {
+  /* (debe cambiar en responsive) */
+  margin-top: 450px;
+  background-color: $black-transparent;
+  border-bottom: 2px solid $black-shadow;
+  border-top: 2px solid $black-shadow;
 
+  .info {
+    margin: 5%;
+    margin-bottom: 0;
+
+    h2 {
+      font-weight: normal;
+      font-size: 30px;
+    }
+
+    p {
+      margin: 30px;
+      margin-bottom: 0;
+      font-size: 20px;
+      color: $text-semi-shadow;
+
+      span {
+        color: $text-resalt;
+      }
+    }
+  }
+}
+
+.card-habilidades {
+  margin: 5%;
+  margin-top: 80px;
+
+  .habilidades-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5%;
+    margin-top: 50px;
+    background-color: rgba(17, 17, 17, 0.5);
+    border-radius: 2px;
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content {
+      margin: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+
+      img {
+        width: 86px;
+        height: auto;
+        margin: 10px;
+        transition: 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .arrow:hover {
+      transform: scale(1.3, 1.3);
+    }
+
+    .title {
+      .img {
+        display: flex;
+        justify-content: center;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        margin: 10px;
+        font-size: 18px;
+        color: $text-shadow;
+        cursor: pointer;
+      }
+
+      .li-selected {
+        color: $text-resalt;
+      }
+
+    }
+
+    img {
+      width: 126px;
+      height: auto;
+    }
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 30px;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Diseno responsivo */
 @media screen and (max-width: 850px) {
 
   .card-presentation {
