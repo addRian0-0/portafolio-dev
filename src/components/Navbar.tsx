@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, animateScroll as scroll } from "react-scroll";
+import cv from "../assets/Ithan-FloresCV.pdf";
 
 export default function Navbar() {
 
@@ -68,7 +69,7 @@ export default function Navbar() {
                 </div>
                 <div>
                     <button className="btn-cv" >
-                        <a href="../assets/Ithan-FloresCV.pdf" download>Descargar CV</a>
+                        <a href={cv} download>Descargar CV</a>
                     </button>
                 </div>
             </div>
