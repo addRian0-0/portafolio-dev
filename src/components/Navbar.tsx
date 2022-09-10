@@ -21,6 +21,7 @@ export default function Navbar() {
 
                         <li>
                             <Link
+                                className="active"
                                 to="acerca"
                                 spy={true}
                                 smooth={true}
@@ -32,6 +33,8 @@ export default function Navbar() {
                         </li>
 
                         <li><Link
+                            className="active"
+
                             to="habilidades"
                             spy={true}
                             smooth={true}
@@ -41,6 +44,8 @@ export default function Navbar() {
                             Habilidades
                         </Link></li>
                         <li><Link
+                            className="active"
+
                             to="proyectos"
                             spy={true}
                             smooth={true}
@@ -49,6 +54,9 @@ export default function Navbar() {
                         >
                             Proyectos
                         </Link></li>
+                        <li>
+                            <button className="btn-cv">Descargar CV</button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -59,7 +67,9 @@ export default function Navbar() {
                     </span>
                 </div>
                 <div>
-                    <h3>Ithan Flores</h3>
+                    <button className="btn-cv" >
+                        <a href="../assets/Ithan-FloresCV.pdf" download>Descargar CV</a>
+                    </button>
                 </div>
             </div>
         </>

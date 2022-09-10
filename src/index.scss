@@ -13,15 +13,8 @@ $main-black: #111;
 $black-transparent: rgba(17, 17, 17, 0.8);
 $black-semi-transparent: rgba(17, 17, 17, 0.5);
 $black-shadow: rgb(45, 44, 44);
-
-@mixin fondo-opt-1 {
-  background: #000000;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+$red-back: rgb(111, 0, 0);
+$red-resalt: rgb(151, 13, 13);
 
 @mixin fondo-opt-2 {
   background: #200122;
@@ -63,6 +56,10 @@ $black-shadow: rgb(45, 44, 44);
 
   li {
     color: $color;
+
+    .active {
+      color: $color;
+    }
   }
 }
 
@@ -155,7 +152,31 @@ body {
     cursor: pointer;
   }
 
+
+
 }
+
+/* boton de cv */
+.btn-cv {
+  margin: 16px;
+  color: $text-semi-shadow;
+  font-size: 17px;
+  background-color: $red-back;
+  padding: 12px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  a {
+    text-decoration: none;
+  }
+}
+
+.btn-cv:hover {
+  background-color: $red-resalt;
+  transform: scale(1.1, 1.1);
+  color: white
+}
+
 
 /* menu colapsable */
 .sidebar {
@@ -184,9 +205,12 @@ body {
     }
 
     li:hover {
-      color: $text-resalt;
       cursor: pointer;
       transform: scale(1.1, 1.1);
+
+      .active {
+        color: $text-resalt;
+      }
     }
 
   }
@@ -235,6 +259,7 @@ body {
     width: 276px;
     height: auto;
     border-radius: 50%;
+    filter: grayscale(0);
   }
 }
 
