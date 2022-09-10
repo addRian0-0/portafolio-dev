@@ -1,20 +1,47 @@
 import { useState } from "react";
 import personitaimg from "../assets/programacion.png";
+import backend from "../assets/backend.png";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { languagesimgs } from "../helpers/assets-imgs";
 import Tooltip from '@mui/material/Tooltip';
 
 import { IHabilidades } from "../interfaces/Habilidades";
-import { tecFront } from "../helpers/assets-imgs";
-
+import { tecFront, tecBack } from "../helpers/assets-imgs";
+import NextSection from "./NextSection";
 export default function CardHabilidades() {
 
     const [secHab, setSectionHabilidad] = useState<IHabilidades>(tecFront);
     const [section, setSection] = useState<string>("Vanilla");
+    const [img, setImg] = useState<string>(personitaimg);
 
     const changeSection = (sectionChange: string) => {
         setSection(sectionChange);
+    }
+
+    const siguiente = () => {
+        if (secHab === tecFront) {
+            setSectionHabilidad(tecBack);
+            setSection("Lenguajes");
+            setImg(backend);
+        }
+        if (secHab === tecBack) {
+            setSectionHabilidad(tecFront);
+            setSection("Vanilla");
+            setImg(personitaimg);
+        }
+    }
+
+    const anterior = () => {
+        if (secHab === tecBack) {
+            setSectionHabilidad(tecFront);
+            setSection("Vanilla");
+            setImg(personitaimg);
+        }
+        if (secHab === tecFront) {
+            setSectionHabilidad(tecBack);
+            setSection("Lenguajes");
+            setImg(backend);
+        }
     }
 
     return (
@@ -22,12 +49,12 @@ export default function CardHabilidades() {
             <h2>Mis habilidades como...</h2>
             <div className="habilidades-info">
                 <div className="arrow" >
-                    <KeyboardArrowLeftIcon sx={{ fontSize: "42px" }} />
+                    <KeyboardArrowLeftIcon onClick={anterior} sx={{ fontSize: "42px" }} />
                 </div>
                 <div className="main">
                     <div className="title">
                         <div className="img">
-                            <img src={personitaimg} alt="" />
+                            <img src={img} alt="" />
                         </div>
                         <h3>{secHab.title}</h3>
                         <ul>
@@ -57,9 +84,10 @@ export default function CardHabilidades() {
                     </div>
                 </div>
                 <div className="arrow">
-                    <KeyboardArrowRightIcon sx={{ fontSize: "42px" }} />
+                    <KeyboardArrowRightIcon onClick={siguiente} sx={{ fontSize: "42px" }} />
                 </div>
             </div>
+            <NextSection idSection="proyectos" />
         </div >
     )
 }

@@ -18,19 +18,38 @@ export const tecFront: IHabilidades = {
     ]
 }
 
-export const languagesimgs = {
-    html: ["html", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"],
-    css: ["css", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"],
-    js: ["javascript", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"],
-    react: ["react", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
-    redux: ["redux", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"],
-    sass: ["sass", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"],
-    bootstrap: ["bootstrap", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"],
-    materialui: ["materialui", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"],
-    node: ["nodejs", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"],
-    java: ["java", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"],
-    python: ["python", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg"],
-    mysql: ["mysql", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"],
-    mongodb: ["mongodb", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"],
-    github: ["github", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"]
+export const tecBack: IHabilidades = {
+    title: "Desarrollador Back-end",
+    sections: [
+        "Lenguajes",
+        "Frameworks y librerias",
+        "Bases de datos",
+        "Otros softwares"
+    ],
+    tecnologias: [
+        { nombre: "javascript", section: "Lenguajes", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { nombre: "typescript", section: "Lenguajes", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { nombre: "java", section: "Lenguajes", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" },
+        { nombre: "python", section: "Lenguajes", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" },
+        { nombre: "node.js", section: "Frameworks y librerias", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { nombre: "express", section: "Frameworks y librerias", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" },
+        { nombre: "django", section: "Frameworks y librerias", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+        { nombre: "socket.io", section: "Frameworks y librerias", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" },
+        { nombre: "jest", section: "Frameworks y librerias", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
+        { nombre: "git", section: "Otros softwares", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { nombre: "github", section: "Otros softwares", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" },
+        { nombre: "windows", section: "Otros softwares", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" },
+        { nombre: "linux", section: "Otros softwares", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+        { nombre: "bash", section: "Otros softwares", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
+        { nombre: "mysql", section: "Bases de datos", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" },
+        { nombre: "mongodb", section: "Bases de datos", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" },
+        { nombre: "redis", section: "Bases de datos", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" },
+    ]
 }
+
+export const herramientasAssets = [
+    { nombre: "Android Studio", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" },
+    { nombre: "Atom", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/atom/atom-original.svg" },
+    { nombre: "Visual Studio Code", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" },
+    { nombre: "Slack", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" },
+]

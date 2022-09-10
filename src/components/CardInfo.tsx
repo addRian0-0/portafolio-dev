@@ -12,7 +12,7 @@ export default function CardInfo() {
                     que tiene sus metas claras y con una verdadera pasión por
                     aprender, me gusta brindar mi apoyo como me gustaría recibirlo.
                     Soy alguien que tiene en claro su persona, las malas y buenas
-                    actitudes que lo conforman y que trata de corregir las malas para mejorar como persona.
+                    actitudes que me conforman y que trata de corregir las malas para mejorar como persona.
                 </p>
             </div>
             <NextSection idSection="habilidades" />

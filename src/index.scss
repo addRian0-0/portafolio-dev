@@ -11,6 +11,7 @@ $text-semi-shadow: rgba(234, 231, 231, 0.9);
 $text-shadow: rgba(234, 231, 231, 0.8);
 $main-black: #111;
 $black-transparent: rgba(17, 17, 17, 0.8);
+$black-semi-transparent: rgba(17, 17, 17, 0.5);
 $black-shadow: rgb(45, 44, 44);
 
 @mixin fondo-opt-1 {
@@ -358,6 +359,159 @@ body {
   }
 }
 
+.card-herramientas {
+  margin: 5%;
+  margin-top: 80px;
+
+  h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .lista {
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      font-size: 22px;
+      margin: 10px;
+      color: $text-shadow;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      color: $text-resalt;
+      transform: scale(1.1, 1.1);
+    }
+
+    .container-img {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    img {
+      width: 124px;
+      height: auto;
+    }
+
+  }
+}
+
+.card-proyectos {
+  margin: 5%;
+  margin-top: 80px;
+
+  h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      max-width: 400px;
+      background-color: $black-transparent;
+      padding: 20px;
+      border-radius: 4px;
+      margin: 30px;
+      cursor: pointer;
+      top: 0;
+      position: relative;
+      box-shadow: -10px 5px 10px $black-semi-transparent;
+      transition: top ease 0.5s;
+
+      h3 {
+        font-weight: normal;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 10px;
+        font-size: 18px;
+        color: $text-shadow;
+      }
+
+      ul {
+        margin-top: 18px;
+        font-size: 18px;
+        margin-left: 28px;
+      }
+
+      li {
+        color: $text-shadow;
+        margin: 10px;
+        margin-top: 5px;
+      }
+
+      .links {
+        margin: 16px;
+
+        a {
+          font-size: 18px;
+          transition: 0.5s;
+          text-decoration: none;
+          padding: 10px;
+          color: $black-shadow;
+        }
+      }
+    }
+
+    .card:hover {
+      top: -15px;
+
+      p {
+        color: white;
+      }
+
+      li {
+        color: white;
+      }
+
+      a {
+        color: $text-resalt;
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $main-black;
+
+  .container {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+
+    div {
+      transition: 0.3s;
+      margin: 10px;
+    }
+
+    div:hover {
+      cursor: pointer;
+      transform: scale(1.3, 1.3);
+
+      a {
+        color: $text-resalt;
+      }
+    }
+  }
+
+}
 
 /* Diseno responsivo */
 @media screen and (max-width: 850px) {

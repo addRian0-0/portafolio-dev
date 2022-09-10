@@ -40,7 +40,15 @@ export default function Navbar() {
                         >
                             Habilidades
                         </Link></li>
-                        <li>Proyectos</li>
+                        <li><Link
+                            to="proyectos"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            Proyectos
+                        </Link></li>
                     </ul>
                 </div>
             </div>
