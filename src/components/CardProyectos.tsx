@@ -80,5 +80,18 @@ const arrayCards: ICard[] = [
         ],
         linkApp: `https://crypto-app-rtk-ts.vercel.app/`,
         linkrepo: `https://github.com/addRian0-0/crypto-app-rtk-ts`
+    },
+    {
+        title: "Portafolio personal",
+        description: `Mi portafolio personal en el que conocerás más de mis aptitudes y actitudes como persona y como desarrollador web. Construido con:`,
+        lista: [
+            `Sass`,
+            `React.js`,
+            `TypeScript`,
+            `Mui`,
+            `Vite`
+        ],
+        linkApp: "https://addrian0-0.vercel.app/",
+        linkrepo: "https://github.com/addRian0-0/portafolio-dev"
     }
 ]

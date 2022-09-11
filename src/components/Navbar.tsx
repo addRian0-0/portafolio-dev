@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, animateScroll as scroll } from "react-scroll";
-import cv from "../assets/Ithan-FloresCV.pdf";
+import cv from "../assets/Ithan-Flores-CV.pdf";
 
 export default function Navbar() {
 

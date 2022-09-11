@@ -1,4 +1,4 @@
-import sisoy from "../assets/yo2jaj.jpg"
+import sisoy from "../assets/yojaja.jpg"
 import NextSection from "./NextSection"
 
 export default function CardPresentation() {
