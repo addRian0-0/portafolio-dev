@@ -55,6 +55,18 @@ export default function Navbar() {
                         >
                             Proyectos
                         </Link></li>
+                        <li><Link
+                            className="active"
+
+                            to="contacto"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            Redes y forma de contacto
+                        </Link></li>
+
                         <li>
                             <button className="btn-cv">Descargar CV</button>
                         </li>
